@@ -22,7 +22,7 @@
   <% if @mission.photo.attached? %>
     <%= cl_image_tag @mission.photo.key, width: 600, height: 200, crop: :fill %>
   <% else %>
-    <%= cl_image_tag("jcflwedvuuwwkihvec2k", width: 600, height: 200, crop: :fill) %>
+    <%= cl_image_tag("drurojfaw2bmayozxkbe", width: 600, height: 200, crop: :fill) %>
   <% end %>
   <div>
   <p class= "font-weight-bold ">  <i class="fas fa-map-marker-alt"></i> Localisation : </p><p><%= @mission.location.capitalize %></p>
@@ -45,7 +45,7 @@
 <div class = "p-3" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);">
   <% if @mission.quota %>
    <p>Pour que cette mission soit un succès, nous avons besoin de <%= @mission.quota %> bénévoles</p>
-  <p class= "font-weight-bold ">Participants (<%= @mission.participations.count%>/<%= @mission.quota %>)</p> 
+  <p class= "font-weight-bold ">Participants (<%= @mission.participations.count%>/<%= @mission.quota %>)</p>
   <% end %>
 
 <% @mission.users.each do |user| %>
@@ -66,7 +66,7 @@
   <%= link_to "RETOUR", missions_path, class: "btn btn-ghost" %>
   <% if policy(@mission).destroy? %>
     <%= link_to "SUPPRIMER", mission_path(@mission), method: :delete, class: "btn btn-ghost red-bg"  %>
-<% end %>  
+<% end %>
 <% if @mission.users.include?(current_user) %>
     <%= link_to "SE DESINSCRIRE", mission_participation_path(@mission), method: :delete, class: "btn btn-ghost" %>
   <% else %>
