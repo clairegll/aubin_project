@@ -41,6 +41,7 @@ import { initAutocomplete } from '../channels/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initAutocomplete();
 })
 
-initAutocomplete();
+
