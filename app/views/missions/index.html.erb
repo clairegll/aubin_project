@@ -1,23 +1,48 @@
+<div class="banner_missions" style=" background-image: linear-gradient(rgba(100,100,100,0.4),rgba(100,100,100,0.4)), url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);">
+  <div class="container center">
+    <h1>Nos offres d'emploi</h1>
+  </div>
+</div>
+
+<div class="container" style="margin-top:30px; display:flex; justify-content:flex-end;">
+  <div class="search_bar">
+    <%= form_tag missions_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "mot-clé"
+      %>
+      <%= submit_tag "Rechercher", class: "btn btn-primary", style:"margin:10px 0;"%>
+<!--         <div class="checkbox_filter">
+          <%= check_box_tag(:pet_dog) %>
+          <%= label_tag(:pet_dog, "I own a dog") %>
+          <%= check_box_tag(:pet_cat) %>
+          <%= label_tag(:pet_cat, "I own a cat") %>
+       </div> -->
+    <% end %>
+  </div>
+</div>
+
 <div class = "container">
-  <h1>Toutes les missions <i class="fas fa-hands-helping"></i></h1>
-  <div class="cards bg-white p-3 mt-4" style="min-height : 65vh">
+  <div class="cards_missions p-3 mt-4" style="min-height : 65vh">
     <% @missions.each do |mission| %>
       <%= link_to  mission_path(mission) do %>
-        <% if mission.photo.attached?%>
-          <div class="card-category p-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path mission.photo.key %>');">
-            <h4><%= mission.title.capitalize %></h4>
-            <p><%= mission.location.capitalize %></p>
-            <p id="date-mission"><%=mission.start_time.strftime("%d/%m/%Y")%></p>
-            <p id="quota-mission"><i class="fas fa-user-friends"></i> <%="#{mission.participations.count}  / #{mission.quota}"%> </p>
+          <div class="card-category_missions">
+            <div class="cc_missions_desc">
+              <h4><%= mission.title.capitalize %></h4>
+              <p><%= mission.summary %></p>
+            </div>
+            <div class="cc_missions_infos">
+              <div>
+                <p id="field-mission"><%=mission.field.capitalize%></p>
+              </div>
+              <div class="cc_missions_infos_content">
+                <p><i class="fas fa-map-marker-alt icon"></i> <%=mission.location.capitalize%></p>
+                <p style="text-transform:uppercase"><i class="fas fa-file-signature icon"></i> <%=mission.contract.capitalize%></p>
+                <p><i class="fas fa-euro-sign icon"></i> <%=mission.salary%>K€/an</p>
+              </div>
+            </div>
           </div>
-        <% else %>
-          <div class="card-category p-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dgrrbkgz4/image/upload/v1606412867/drurojfaw2bmayozxkbe.jpg)">
-            <h4><%= mission.title.capitalize %></h4>
-            <p><%= mission.location.capitalize %></p>
-            <p id="date-mission"><%=mission.start_time.strftime("%d/%m/%Y")%></p>
-            <p id="quota-mission"><i class="fas fa-user-friends"></i> <%="#{mission.participations.count}  / #{mission.quota}"%> </p>
-          </div>
-        <% end %>
       <% end %>
     <% end %>
   </div>

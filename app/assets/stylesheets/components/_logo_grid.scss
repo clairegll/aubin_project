@@ -1,0 +1,39 @@
+.brands {
+  margin-top:30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding-left:0;
+}
+
+.brands__item {
+  text-align: center;
+  min-height: 140px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  flex: 0 0 50%;
+}
+
+.brands__item i {
+  font-size:30px;
+}
+
+.brands__item p {
+  font-size:18px;
+  margin:5px;
+}
+
+
+@media (min-width: 700px) {
+  .brands__item {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .brands__item {
+    flex: 0 0 18%;
+  }
+}

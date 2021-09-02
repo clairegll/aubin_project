@@ -1,0 +1,93 @@
+.banner_missions{
+  background-size: cover;
+  min-height:200px;
+  display:flex;
+  justify-content:center;
+  align-items:middle;
+  background-position: center;
+    h1{
+      color: white;
+      text-transform: uppercase;
+      font-size: 45px;
+      font-weight:bold;
+    }
+    p{
+      color:white;
+      font-weight:bold;
+      font-size:18px;
+  }
+}
+
+.mission_header{
+  margin:30px 0 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  p{
+    font-size:13px;
+    margin:0;
+    padding: 0 13px 0;
+  }
+}
+
+.container_mission{
+  margin:40px 10px 0;
+}
+
+.mission_content{
+  display:flex;
+  justify-content:space-between;
+}
+
+.mission_content_desc{
+  margin-right:10px;
+}
+
+.mission_content_desc_title{
+  margin-top: 5px;
+  font-weight:bold;
+}
+
+.mission_content_infos_maps{
+  box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
+  background-color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+.mission_content_infos{
+  font-weight:bold;
+  font-size:16px;
+  margin-bottom:20px;
+    h5{
+      text-transform:uppercase;
+      font-weight:bold;
+      margin-bottom:30px;
+    }
+    .icon{
+    color: #3478F5;
+    margin-right:10px;
+    min-width:30px;
+    }
+}
+
+.map_mission{
+  width: 200px;
+  height: 200px;
+  border-radius:50%
+}
+
+.btn_apply {
+  color: #fff;
+  font-size:16px;
+  background-color: #3478F5;
+  border-radius:20px;
+  padding:10px 60px;
+  opacity: 1;
+  transition: opacity 0.3s ease;}
+
+.btn_apply:hover {
+  color: #fff;
+  opacity: 0.8;}

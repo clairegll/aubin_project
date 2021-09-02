@@ -1,11 +1,23 @@
 class MissionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!
 
   def index
     if params[:user_id]
       @missions = current_user.missions
+      if params[:query].present?
+        sql_query = "title ILIKE :query OR summary ILIKE :query OR description ILIKE :query OR contract ILIKE :query OR field ILIKE :query OR reference ILIKE :query"
+        @missions = Mission.where(sql_query, query: "%#{params[:query]}%")
+      else
+        @missions = Mission.all
+      end
     else
-    @missions = policy_scope(Mission).order(created_at: :desc)
+      @missions = policy_scope(Mission).order(created_at: :desc)
+      if params[:query].present?
+        sql_query = "title ILIKE :query OR summary ILIKE :query OR description ILIKE :query OR contract ILIKE :query OR field ILIKE :query OR reference ILIKE :query"
+        @missions = Mission.where(sql_query, query: "%#{params[:query]}%")
+      else
+        @missions = Mission.all
+      end
     end
   end
 
@@ -45,6 +57,6 @@ class MissionsController < ApplicationController
   private
 
   def mission_params
-    params.require(:mission).permit(:title, :description, :location, :quota, :start_time, :end_time, :association, :done, :photo, :latitude, :longitude)
+    params.require(:mission).permit(:title, :description, :location, :salary, :start_time, :end_time, :contract, :done, :summary, :profil, :reference, :field, :latitude, :longitude)
   end
 end

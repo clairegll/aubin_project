@@ -2,22 +2,28 @@
   display: flex;
   justify-content: space-between;
   background-color: #FCFCFC;
-  color: #005C9C;
+  color: #3478F5;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
+  margin:20px;
 }
 
 .navbar a {
-  color: #005C9C !important;
+  color: #3478F5 !important;
   display: inline-block;
   margin-right: 5px;
   margin-left: 5px;
   padding: 0px !important;
   }
 
+.nav-item{
+  padding: 0 20px;
+}
+
 .navbar a:hover {
-  border-bottom: 3px solid #005C9C;
-  transition: border 200ms ease;
+  opacity: 0.8;
+  // border-bottom: 2px solid #3478F5;
+  // transition: border 200ms ease;
 }
 
 .navbar .navbar-collapse {
@@ -25,8 +31,5 @@
 }
 
 .navbar .navbar-brand img {
-  width: 50px;
-  border-bottom: none;
+  width: 80px;
 }
-
-

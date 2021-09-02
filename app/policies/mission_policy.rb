@@ -9,14 +9,14 @@ class MissionPolicy < ApplicationPolicy
     return true
   end
   def new?
-    return true
+    user.admin
   end
   def create?
-    return true
+    user.admin
   end 
   def destroy?
     if user
-      record.user == user || user.admin
+      user.admin
     end
   end
 
