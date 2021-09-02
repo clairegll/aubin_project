@@ -1,6 +1,6 @@
 <div class="container justify-content-center d-flex align-items-center">
   <div class= "sign-form p-4">
-    <h2>Connectez-vous</h2>
+    <h2>Espace administrateur</h2>
     <br>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
@@ -19,10 +19,10 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Se connecter", class: "btn btn-ghost"%>
+        <%= f.button :submit, "Se connecter", class: "btn btn_apply"%>
       </div>
     <% end %>
-    <br>
-    <%= render "devise/shared/links" %>
+<!--     <br>
+    <%= render "devise/shared/links" %> -->
   </div>
 </div>

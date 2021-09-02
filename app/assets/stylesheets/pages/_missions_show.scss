@@ -3,7 +3,6 @@
   min-height:200px;
   display:flex;
   justify-content:center;
-  align-items:middle;
   background-position: center;
     h1{
       color: white;
@@ -37,10 +36,11 @@
 .mission_content{
   display:flex;
   justify-content:space-between;
+  flex-direction:row;
 }
 
 .mission_content_desc{
-  margin-right:10px;
+  margin-right:80px;
 }
 
 .mission_content_desc_title{
@@ -91,3 +91,58 @@
 .btn_apply:hover {
   color: #fff;
   opacity: 0.8;}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner_missions{
+      h1{
+        font-size: 30px !important;}
+    }
+  .mission_content{
+    flex-direction:column-reverse;
+  }
+  .mission_content_infos_maps{
+    padding:15px;
+    margin-bottom: 35px;
+  }
+  .mission_content_desc{
+    margin-right:15px;
+  }
+}
+  // Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .banner_missions{
+      h1{
+        font-size: 30px !important;}
+    }
+  .mission_content{
+    flex-direction:column-reverse;
+  }
+  .mission_content_infos_maps{
+    padding:15px;
+    margin-bottom: 35px;
+  }
+  .mission_content_desc{
+    margin-right:15px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .banner_missions{
+    h1{
+      font-size: 45px;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
+

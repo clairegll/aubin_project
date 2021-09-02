@@ -11,8 +11,8 @@ Mission.destroy_all
 User.destroy_all
 Participation.destroy_all
 
-admin_1 = User.create!(fullname: "Administrateur", city: "Paris", email: "contact@abnrecrutement.fr", password: "CTadmin13!", admin: true)
-admin_2 = User.create!(fullname: "Antoine Aubin", city: "Paris", email: "antoine.aubin@abnrecrutement.fr", password: "AEadmin13!", admin: true)
+admin_1 = User.create!(fullname: "Administrateur", email: "contact@abnrecrutement.fr", password: "CTadmin13!", admin: true)
+admin_2 = User.create!(fullname: "Antoine Aubin", email: "antoine.aubin@abnrecrutement.fr", password: "AEadmin13!", admin: true)
 
 puts "created #{User.count} users"
 
