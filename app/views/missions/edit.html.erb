@@ -1,6 +1,6 @@
 <div class="container">
   <div class= "sign-form p-4">
-    <h2 style="margin:20px;font-size:30px;">Créer une fiche de poste</h2>
+    <h2 style="margin:20px;font-size:30px;">Modifier la fiche de poste</h2>
 
     <%= simple_form_for(@mission) do |f| %>
       <%= f.input :field,
@@ -39,7 +39,7 @@
       <%= f.input :profil ,
                   label: false,
                   placeholder: "Quel profil recherchez-vous?"%>
-      <%= f.submit "Créer la fiche de poste", class: "btn btn_apply"%>
+      <%= f.submit "Modifier", class: "btn btn_apply"%>
     <% end %>
 
     <%= link_to "Retour", missions_path %>

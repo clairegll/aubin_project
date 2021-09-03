@@ -6,6 +6,7 @@
 
 <div class="container" style="margin-top:30px; display:flex; justify-content:flex-end;">
   <div class="search_bar">
+
     <%= form_tag missions_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -13,13 +14,39 @@
         placeholder: "mot-clé"
       %>
       <%= submit_tag "Rechercher", class: "btn btn-primary", style:"margin:10px 0;"%>
-<!--         <div class="checkbox_filter">
-          <%= check_box_tag(:pet_dog) %>
-          <%= label_tag(:pet_dog, "I own a dog") %>
-          <%= check_box_tag(:pet_cat) %>
-          <%= label_tag(:pet_cat, "I own a cat") %>
-       </div> -->
     <% end %>
+
+
+<!-- <label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+    <option value="">--Please choose an option--</option>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="hamster">Hamster</option>
+    <option value="parrot">Parrot</option>
+    <option value="spider">Spider</option>
+    <option value="goldfish">Goldfish</option>
+</select>
+
+<input type="text" list="cars" />
+<datalist id="cars">
+  <option>Volvo</option>
+  <option>Saab</option>
+  <option>Mercedes</option>
+  <option>Audi</option>
+</datalist>
+
+<div id="billdesc">
+    <select id="test">
+      <option class="non" value="option1">Option1</option>
+      <option class="non" value="option2">Option2</option>
+      <option class="editable" value="other">Other</option>
+    </select>
+    <input class="editOption" style="display:none;"></input>
+</div> -->
+
+
   </div>
 </div>
 

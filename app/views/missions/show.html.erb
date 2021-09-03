@@ -26,7 +26,7 @@
           <h5><%= @mission.field.capitalize %></h5>
           <p> <i class="fas fa-file-signature icon"></i> <%= @mission.contract %> </p>
           <p> <i class="fas fa-euro-sign icon"> </i> <%= @mission.salary%>K€/an</p>
-<!--           <% if @mission.start_time? %><p> <i class="far fa-clock icon"></i>  <%= @mission.start_time.strftime("%d/%m/%Y") %> </p><% end %> -->
+          <% if @mission.start_time? %><p> <i class="far fa-clock icon"></i>  <%= @mission.start_time.strftime("%d/%m/%Y") %> </p><% end %>
           <p> <i class="fas fa-map-marker-alt icon"></i>  <%= @mission.location.capitalize.first(13) %></p>
         </div>
         <div id="map"
@@ -41,6 +41,9 @@
       <button data-tf-slider="ISX4CSk4" data-tf-width="550" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Participer</button>
       <script src="//embed.typeform.com/next/embed.js"></script>
       <div class = "justify-content-between mt-3">
+        <% if policy(@mission).update? %>
+          <%= link_to "MODIFIER", edit_mission_path(@mission), class: "btn btn-ghost red-bg"  %>
+        <% end %>
         <% if policy(@mission).destroy? %>
           <%= link_to "SUPPRIMER", mission_path(@mission), method: :delete, class: "btn btn-ghost red-bg"  %>
         <% end %>

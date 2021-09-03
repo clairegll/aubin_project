@@ -53,6 +53,21 @@ class MissionsController < ApplicationController
     redirect_to missions_path
   end
 
+  def edit
+    @mission = Mission.find(params[:id])
+    authorize @mission
+  end
+
+  def update
+    @mission = Mission.find(params[:id])
+    @mission.update(mission_params)
+    authorize @mission
+      if @mission.save
+        redirect_to mission_path(@mission)
+      else
+        render :new
+      end
+  end
 
   private
 

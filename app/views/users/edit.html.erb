@@ -1,37 +1,37 @@
 <h2>Modifier mon profil</h2>
 <div class="container justify-content-center d-flex align-items-center">
-<div class= "sign-form p-4">
-  <div class="form-inputs">
+  <div class= "sign-form p-4">
+    <div class="form-inputs">
 
-    <%= simple_form_for @user, url: user_path(@user) do |f| %>
+      <%= simple_form_for @user, url: user_path(@user) do |f| %>
 
-      <div class="form-inputs">
-      <%= f.input :fullname,
-                    label: false,
-                    placeholder: 'Nom complet',
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "fullname" }%>
-      <%= f.input :city,
-                    label: false,
-                    placeholder: 'Ville',
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "Ville" }%>
-      <%= f.input :description,
-                    label: false,
-                    placeholder: 'Décrivez-vous',
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "Description" }%>
-        <%= f.input :photo, as: :file %>
-      </div>
+        <div class="form-inputs">
+        <%= f.input :fullname,
+                      label: false,
+                      placeholder: 'Nom complet',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "fullname" }%>
+        <%= f.input :city,
+                      label: false,
+                      placeholder: 'Ville',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "Ville" }%>
+        <%= f.input :description,
+                      label: false,
+                      placeholder: 'Décrivez-vous',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "Description" }%>
+          <%= f.input :photo, as: :file %>
+        </div>
 
-      <div class="form-actions">
-      <%= link_to "Mettre à jour", class: "btn btn-ghost", method: "put"  %>
-      </div>
-    <% end %>
+        <div class="form-actions">
+        <%= link_to "Mettre à jour", class: "btn btn-ghost", method: "put"  %>
+        </div>
+      <% end %>
 
+    </div>
   </div>
-</div>
 </div>

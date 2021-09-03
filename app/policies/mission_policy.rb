@@ -14,7 +14,20 @@ class MissionPolicy < ApplicationPolicy
   def create?
     user.admin
   end 
+
   def destroy?
+    if user
+      user.admin
+    end
+  end
+
+  def update?
+    if user
+      user.admin
+    end
+  end
+
+  def edit?
     if user
       user.admin
     end
