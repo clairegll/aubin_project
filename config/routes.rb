@@ -24,4 +24,3 @@ Rails.application.routes.draw do
     resources :participations, only: [:create, :destroy]
   end
 end
-
