@@ -25,7 +25,7 @@
         <div class="mission_content_infos">
           <h5><%= @mission.field.capitalize %></h5>
           <p> <i class="fas fa-file-signature icon"></i> <%= @mission.contract %> </p>
-          <p> <i class="fas fa-euro-sign icon"> </i> <%= @mission.salary%>K€/an</p>
+          <p> <i class="fas fa-euro-sign icon"> </i> <%= @mission.salary%></p>
           <% if @mission.start_time? %><p> <i class="far fa-clock icon"></i>  <%= @mission.start_time.strftime("%d/%m/%Y") %> </p><% end %>
           <p> <i class="fas fa-map-marker-alt icon"></i>  <%= @mission.location.capitalize.first(13) %></p>
         </div>
