@@ -72,6 +72,6 @@ class MissionsController < ApplicationController
   private
 
   def mission_params
-    params.require(:mission).permit(:title, :description, :location, :salary, :start_time, :end_time, :contract, :done, :summary, :profil, :reference, :field, :latitude, :longitude)
+    params.require(:mission).permit(:title, :description, :location, :salary, :start_time, :end_time, :contract, :done, :summary, :profil, :reference, :field, :latitude, :longitude, :days)
   end
 end
