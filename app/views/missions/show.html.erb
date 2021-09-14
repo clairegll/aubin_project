@@ -15,9 +15,11 @@
     <div class = "mission_content">
       <div class = "mission_content_desc">
         <p class = "mission_content_desc_title"> ABN Recrutement en quelques mots : </p>
-        <p>Le cabinet ABN Recrutement est spécialisé dans le recrutement pour quatre secteurs d'activité (Finance & RH, Logistique & Manutention, Assistanat et Vente) , accompagne ses clients dans leurs besoins en recrutement et ses candidats dans leur recherche d'emploi en France métropolitaine.</p>
+        <p>Abn recrutement est une agence d'intérim spécialisée en logistique, dans le tertiaire et en Finance  en France métropolitaine. La satisfaction de nos client et de nos intérimaires sont notre priorité</p>
         <p class = "mission_content_desc_title"> Description du poste : </p>
         <p><%= @mission.description.capitalize %></p>
+        <p class = "mission_content_desc_title"> Jours et horaires travaillés : </p>
+        <p><%= @mission.days.capitalize %></p>
         <p class = "mission_content_desc_title"> Profil recherché : </p>
         <p><%= @mission.profil.capitalize %></p>
       </div>
@@ -27,7 +29,7 @@
           <p> <i class="fas fa-file-signature icon"></i> <%= @mission.contract %> </p>
           <p> <i class="fas fa-euro-sign icon"> </i> <%= @mission.salary%></p>
           <% if @mission.start_time? %><p> <i class="far fa-clock icon"></i>  <%= @mission.start_time.strftime("%d/%m/%Y") %> </p><% end %>
-          <p> <i class="fas fa-map-marker-alt icon"></i>  <%= @mission.location.capitalize.first(13) %></p>
+          <p> <i class="fas fa-map-marker-alt icon"></i>  <%= @mission.location.capitalize.first(20) %></p>
         </div>
         <div id="map"
         class="map_mission"

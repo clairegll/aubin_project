@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_03_154518) do
+ActiveRecord::Schema.define(version: 2021_09_14_084952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2021_09_03_154518) do
     t.string "field"
     t.text "profil"
     t.text "summary"
+    t.text "days"
     t.index ["user_id"], name: "index_missions_on_user_id"
   end
 
