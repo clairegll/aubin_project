@@ -8,6 +8,7 @@ const initMapbox = () => {
     map.fitBounds(bounds, { padding: 70, maxZoom: 10, duration: 0 });
   };
   if (mapElement) { // only build a map if there's a div#map to inject into
+    // mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     mapboxgl.accessToken = 'pk.eyJ1IjoicmViZWMiLCJhIjoiY2toeXBubGcxMDM0ZjJ6cWt5bW0wcjR6OSJ9.P5Jo35JaNzLMZwiVDCyQtw'
 
     const map = new mapboxgl.Map({

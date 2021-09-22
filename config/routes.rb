@@ -23,4 +23,8 @@ Rails.application.routes.draw do
     # end
     resources :participations, only: [:create, :destroy]
   end
+
+ get "fields", to: "pages#fields" , as: :page_fields
+ get "about", to: "pages#about", as: :page_about
+
 end

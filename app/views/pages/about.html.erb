@@ -1,0 +1,131 @@
+<div class="banner_missions" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://marketplace.canva.com/F75pA/MAEKdFF75pA/1/s2/canva-job-seekers-with-resumes-in-hands-waiting-for-job-interview-sitting-on-chairs-in-a-row-MAEKdFF75pA.jpg);">
+  <div class="container center">
+    <h1>Qui sommes nous?</h1>
+  </div>
+</div>
+
+<div class= "container">
+  <h2 class="citation">"Bien plus qu'une agence d'intérim, nous sommes votre partenaire au quotidien." </h2>
+</div>
+
+<div class = "container">
+    <p class="subtitle_blue mt-5">Nos valeurs</p>
+    <div class="cards_about p-3 mt-4" style="min-height : 65vh">
+        <div class="card-category_about">
+          <h4 class="text_blue">Expertise</h4>
+          <p>Notre équipe experte du travail temporaire vous propose une solution intérim innovante ainsi que des candidats recrutés scrupuleusement. Nous nous assurons également que les postes proposés à nos candidats soient ceux qui leurs conviennent le mieux.</p>
+        </div>
+
+        <div class="card-category_about">
+          <h4 class="text_blue">Proximité et disponibilité </h4>
+          <p>Nous nous rendons régulièrement chez nos clients, ce qui nous permet de faire le point sur les missions en cours et sur les besoins à venir. Nous sommes également disponibles par mail et par téléphone tous les jours de la semaine et le week-end.</p>
+        </div>
+
+        <div class="card-category_about">
+          <h4 class="text_blue">Humain</h4>
+            <p>L'humain est au centre de toutes nos attentions. Si la satisfaction de nos clients est notre priorité, le bien-être de nos intérimaires n'en est pas moins important. Nous réalisons régulièrement des entretiens de suivi pour faire le point sur leurs attentes et sur leurs interrogations.</p>
+        </div>
+
+        <div class="card-category_about">
+          <h4 class="text_blue">Fiabilité</h4>
+            <p>Nous accordons une importance particulière quant à la fiabilité des documents administratifs de nos clients et de nos salariés. C'est pourquoi chaque document établi (contrat, facture, bulletin de paye, attestation) est vérifié minutieusement par notre service comptabilité.</p>
+        </div>
+    </div>
+</div>
+
+<div class = "container">
+    <p class="subtitle_blue m-5">L'équipe</p>
+    <div class="cards_team">
+      <div class="card_team">
+        <%= image_tag "photo-avatar-profil.png" %>
+        <p class="name">Rebecca</p>
+        <p>Sales</p>
+      </div>
+      <div class="card_team">
+        <%= image_tag "photo-avatar-profil.png" %>
+        <p class="name">Antoine</p>
+        <p>Chargé relation client et responsable recrutement </p>
+      </div>
+      <div class="card_team">
+        <%= image_tag "photo-avatar-profil.png" %>
+        <p class="name">Anna</p>
+        <p>Aide comptable</p>
+      </div>
+    </div>
+
+</div>
+
+
+<style>
+
+.citation{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.subtitle_blue{
+    font-size: 22px;
+    text-align: center;
+    color: #3478F5;
+    font-weight: bold;
+}
+
+.text_blue{
+    text-align: center;
+    color: #3478F5;
+    font-style: italic;
+    margin: 25px;
+    font-size: 18px;
+}
+
+.cards_about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.card-category_about {
+  margin-bottom: 40px;
+  box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
+  background-color:white;
+  line-height: 1.5;
+  justify-content: space-between;
+  padding: 40px;
+  text-align: center;
+}
+
+.cards_team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.cards_team img{
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.card_team{
+  text-align: center;
+  padding: 30px;
+
+}
+
+.name{
+  margin-top: 10px;
+  color: #3478F5;
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .cards_about {
+    grid-template-columns: 1fr;
+  }
+
+}
+</style>
