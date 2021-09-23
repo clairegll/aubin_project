@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   end
 
-
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only: [:show, :edit, :update]
@@ -26,5 +25,8 @@ Rails.application.routes.draw do
 
  get "fields", to: "pages#fields" , as: :page_fields
  get "about", to: "pages#about", as: :page_about
+
+  get 'sitemap.xml', to: 'pages#sitemap', format: 'xml', as: :sitemap
+
 
 end

@@ -4,10 +4,11 @@ class MissionPolicy < ApplicationPolicy
       scope.all
     end
   end
-  
+
   def show?
     return true
   end
+
   def new?
     user.admin
   end

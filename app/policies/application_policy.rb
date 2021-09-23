@@ -1,6 +1,12 @@
 class ApplicationPolicy
   attr_reader :user, :record
 
+
+  def sitemap?
+     return true
+  end
+
+
   def initialize(user, record)
     @user = user
     @record = record

@@ -10,4 +10,7 @@ class PagesController < ApplicationController
   def fields
   end
 
+  def sitemap
+  end
+
 end
