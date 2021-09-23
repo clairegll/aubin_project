@@ -3,6 +3,11 @@ class Mission < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :users, through: :participations
 
+  has_rich_text :description
+  has_rich_text :location
+  has_rich_text :summary
+  has_rich_text :profil
+
   validates :title, presence: true
   validates :location, presence: true
   validates :description, presence: true

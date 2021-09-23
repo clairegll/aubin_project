@@ -17,19 +17,19 @@
         <p class = "mission_content_desc_title"> ABN Recrutement en quelques mots : </p>
         <p>Abn recrutement est une agence d'intérim spécialisée en logistique, dans le tertiaire et en Finance  en France métropolitaine. La satisfaction de nos client et de nos intérimaires sont notre priorité</p>
         <p class = "mission_content_desc_title"> Description du poste : </p>
-        <p><%= @mission.description.capitalize %></p>
+        <p><%= @mission.description %></p>
         <p class = "mission_content_desc_title"> Jours et horaires travaillés : </p>
-        <p><%= @mission.days.capitalize %></p>
+        <p><%= @mission.days %></p>
         <p class = "mission_content_desc_title"> Profil recherché : </p>
-        <p><%= @mission.profil.capitalize %></p>
+        <p><%= @mission.profil %></p>
       </div>
       <div class="mission_content_infos_maps">
         <div class="mission_content_infos">
-          <h5><%= @mission.field.capitalize.gsub(/\n/, '<br/>') %></h5>
+          <h5><%= @mission.field.gsub(/\n/, '<br/>') %></h5>
           <p> <i class="fas fa-file-signature icon"></i> <%= @mission.contract %> </p>
           <p> <i class="fas fa-euro-sign icon"> </i> <%= @mission.salary %></p>
           <% if @mission.start_time? %><p> <i class="far fa-clock icon"></i>  <%= @mission.start_time.strftime("%d/%m/%Y") %> </p><% end %>
-          <p> <i class="fas fa-map-marker-alt icon"></i>  <%= @mission.location.capitalize.first(20) %></p>
+          <p> <i class="fas fa-map-marker-alt icon"></i>  <%= @mission.location %></p>
         </div>
         <div id="map"
         class="map_mission"

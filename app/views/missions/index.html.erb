@@ -56,16 +56,16 @@
       <%= link_to  mission_path(mission) do %>
           <div class="card-category_missions">
             <div class="cc_missions_desc">
-              <h4><%= mission.title.capitalize %></h4>
+              <h4><%= mission.title %></h4>
               <p><%= mission.summary %></p>
             </div>
             <div class="cc_missions_infos">
               <div>
-                <p id="field-mission"><%=mission.field.capitalize%></p>
+                <p id="field-mission"><%=mission.field%></p>
               </div>
               <div class="cc_missions_infos_content">
-                <p><i class="fas fa-map-marker-alt icon"></i> <%=mission.location.capitalize.first(20)%></p>
-                <p style="text-transform:uppercase"><i class="fas fa-file-signature icon"></i> <%=mission.contract.capitalize%></p>
+                <p><i class="fas fa-map-marker-alt icon"></i> <%=mission.location%></p>
+                <p style="text-transform:uppercase"><i class="fas fa-file-signature icon"></i> <%=mission.contract%></p>
                 <p><i class="fas fa-euro-sign icon"></i> <%=mission.salary%></p>
               </div>
             </div>

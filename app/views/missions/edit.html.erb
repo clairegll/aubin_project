@@ -28,13 +28,16 @@
       <%= f.input :days ,
                   label: false,
                   placeholder: "Jours et horaires travaillés"%>
-      <%= f.input :summary ,
+      <%= f.input :summary,
+                  as: :rich_text_area,
                   label: false,
                   placeholder: "Résumé du poste (qui apparait sur la page 'toutes les offres')"%>
-      <%= f.input :description ,
+      <%= f.input :description,
+                  as: :rich_text_area,
                   label: false,
                   placeholder: "Description du poste (qui apparait dans la fiche de poste)"%>
-      <%= f.input :profil ,
+      <%= f.input :profil,
+                  as: :rich_text_area,
                   label: false,
                   placeholder: "Quel profil recherchez-vous?"%>
       <%= f.submit "Modifier", class: "btn btn_apply"%>
