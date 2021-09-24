@@ -33,7 +33,7 @@
                   as: :rich_text_area,
                   label: false,
                   placeholder: "Résumé du poste (qui apparait sur la page 'toutes les offres')"%>
-      <%= f.input :description ,
+      <%= f.input :description,
                   as: :rich_text_area,
                   label: false,
                   placeholder: "Description du poste (qui apparait dans la fiche de poste)"%>
@@ -47,3 +47,9 @@
     <%= link_to "Retour", missions_path %>
   </div>
 </div>
+
+<style>
+.rich_text_area{
+  min-height: 20em !important;}
+</style>
+
