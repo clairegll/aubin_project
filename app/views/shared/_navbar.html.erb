@@ -31,12 +31,61 @@
           <%= link_to "Entreprise", "https://abnrecrutement.bestt.fr/login", rel: "nofollow"  %>
         </li>
          <li class="nav-item">
-          <%= link_to "A propos", page_about_path, class: "nav-link" %>
-        </li>
-         <li class="nav-item">
-          <%= link_to "Nos secteurs d'activités", page_fields_path, class: "nav-link" %>
+          <%= link_to "Valeurs", page_about_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
+
+
+<style>
+  .content-container{
+    margin-top: 85px;
+  }
+
+  .navbar-container{
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      background-color: #3478F5;
+      color: white;
+  }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #3478F5;
+}
+
+
+.navbar a {
+  color: white !important;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px !important;
+  }
+
+.nav-item{
+  padding: 0 20px;
+  text-decoration:none;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+  text-decoration:none;
+}
+
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar .navbar-brand img {
+  width: 80px;
+}
+
+
+</style>
