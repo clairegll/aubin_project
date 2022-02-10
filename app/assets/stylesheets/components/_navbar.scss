@@ -1,1 +1,46 @@
+.content-container{
+  margin-top: 90px;
+}
 
+.navbar-container{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #3478F5;
+    color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #3478F5;
+}
+
+
+.navbar a {
+  color: white !important;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px !important;
+  }
+
+.nav-item{
+  padding: 0 20px;
+  text-decoration:none;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+  text-decoration:none;
+}
+
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar .navbar-brand img {
+  width: 80px;
+}

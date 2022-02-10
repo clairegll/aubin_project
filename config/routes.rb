@@ -24,5 +24,5 @@ Rails.application.routes.draw do
   get "fields", to: "pages#fields" , as: :page_fields
   get "about", to: "pages#about", as: :page_about
   get 'sitemap.xml', to: 'pages#sitemap', format: 'xml', as: :sitemap
-
+  get 'contact', to: "pages#contact", as: :contact
 end

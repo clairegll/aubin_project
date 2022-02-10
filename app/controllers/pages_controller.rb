@@ -13,4 +13,6 @@ class PagesController < ApplicationController
   def sitemap
   end
 
+  def contact
+  end
 end
