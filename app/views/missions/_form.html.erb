@@ -1,0 +1,40 @@
+<%= simple_form_for(mission) do |f| %>
+  <%= f.input :field,
+              required: true,
+              label: "Choississez le domaine d'activité",
+              collection: ['Finance & RH','Vente en magasin','Logistique & Manutention','Assistanat & Secrétariat', 'Comptabilité','Service client','Ingénierie VRD','Travaux publics']%>
+  <%= f.input :title,
+              required: true,
+              label: false,
+              placeholder: "Titre du poste"%>
+  <%= f.input :reference,
+              required: true,
+              label: false,
+              placeholder: "Référence de l'offre"%>
+  <%= f.input :contract,
+              required: true,
+              label: "Choississez le type de contrat",
+              :collection => ['CDD','CDI','Intérim']%>
+  <%= f.input :salary,
+              label: false,
+              placeholder: "Inscrivez une fourchette de salaire"%>
+  <%= f.input :location ,
+              label: false,
+              placeholder: "Lieu précis de la mission"%>
+  <%= f.input :days ,
+              label: false,
+              placeholder: "Jours et horaires travaillés"%>
+  <%= f.input :summary ,
+              as: :rich_text_area,
+              label: false,
+              placeholder: "Résumé du poste (qui apparait sur la page 'toutes les offres')"%>
+  <%= f.input :description,
+              as: :rich_text_area,
+              label: false,
+              placeholder: "Description du poste (qui apparait dans la fiche de poste)"%>
+  <%= f.input :profil,
+              as: :rich_text_area,
+              label: false,
+              placeholder: "Quel profil recherchez-vous?"%>
+  <%= f.submit "#{action == 'new' ? 'Créer la fiche de poste' : 'Modifier' }", class: "btn btn_apply"%>
+<% end %>
