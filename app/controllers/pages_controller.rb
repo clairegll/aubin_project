@@ -12,4 +12,8 @@ class PagesController < ApplicationController
   def contact; end
 
   def cookies; end
+
+  def cookies_accepted
+    session['cookie_eu_consented'] = "true"
+  end
 end
