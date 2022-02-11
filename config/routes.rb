@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   get "about", to: "pages#about", as: :page_about
   get 'sitemap.xml', to: 'pages#sitemap', format: 'xml', as: :sitemap
   get 'contact', to: "pages#contact", as: :contact
+  get 'politique-confidentialite', to: "pages#cookies", as: :cookies
 end
