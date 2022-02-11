@@ -32,14 +32,14 @@
 .card-category_missions {
   margin-bottom: 40px;
   box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
-  background-color:white;
+  background-color: white;
   // border: 2px solid #3478F5;
   line-height: 1;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   font-size: 18px;
   padding: 15px;
-  color:#1e2c34;
+  color: #1e2c34;
 }
 .card-category_missions:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -48,6 +48,7 @@
 .cc_missions_desc{
   min-width: 400px;
   max-width:720px;
+  // width: 70%;
   margin:10px;
     h4 {
     font-size: 20px !important;
@@ -63,6 +64,7 @@
 
 .cc_missions_infos{
   min-width:270px;
+  // width: 30%;
   margin-left:20px;
   display:flex;
   flex-direction:column;
