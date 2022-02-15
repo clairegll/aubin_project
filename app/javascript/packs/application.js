@@ -14,8 +14,11 @@ import "bootstrap";
 // Internal imports, e.g:
 import { initMapbox } from '../components/init_mapbox';
 import { initAutocomplete } from '../components/init_autocomplete';
+import { initCookies } from '../components/init_cookies';
 
 document.addEventListener('turbolinks:load', () => {
+  initCookies();
+
   if (window.location.pathname.includes('/missions/')) {
     initMapbox();
     initAutocomplete();
