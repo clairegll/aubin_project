@@ -36,6 +36,7 @@ gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
 gem 'pundit'
+gem 'cookies_eu'
 
 group :development, :test do
   gem 'pry-byebug'

@@ -3,36 +3,37 @@
   <head>
     <title>ABN Recrutement, votre partenaire intérim, CDD et CDI</title>
     <meta name="description" content="Votre partenaire en recrutement dans les secteurs de la logistique et du tertiaire ">
+    <meta name="google-site-verification" content="-Jq9wlOwRT1FcfOjy3fELk4Cz2_BzL-PhTdSHuGBOE8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag 'favicon.png' %>
-    <meta name="google-site-verification" content="-Jq9wlOwRT1FcfOjy3fELk4Cz2_BzL-PhTdSHuGBOE8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
     <!-- TRIX -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js" integrity="sha512-/1nVu72YEESEbcmhE/EvjH/RxTg62EKvYWLG3NdeZibTCuEtW5M4z3aypcvsoZw03FAopi94y04GhuqRU9p+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.css" integrity="sha512-CWdvnJD7uGtuypLLe5rLU3eUAkbzBR3Bm1SFPEaRfvXXI2v2H5Y0057EMTzNuGGRIznt8+128QIDQ8RqmHbAdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.min.css" integrity="sha512-5m1IeUDKtuFGvfgz32VVD0Jd/ySGX7xdLxhqemTmThxHdgqlgPdupWoSN8ThtUSLpAGBvA8DY2oO7jJCrGdxoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js" integrity="sha512-/1nVu72YEESEbcmhE/EvjH/RxTg62EKvYWLG3NdeZibTCuEtW5M4z3aypcvsoZw03FAopi94y04GhuqRU9p+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.css" integrity="sha512-CWdvnJD7uGtuypLLe5rLU3eUAkbzBR3Bm1SFPEaRfvXXI2v2H5Y0057EMTzNuGGRIznt8+128QIDQ8RqmHbAdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.min.css" integrity="sha512-5m1IeUDKtuFGvfgz32VVD0Jd/ySGX7xdLxhqemTmThxHdgqlgPdupWoSN8ThtUSLpAGBvA8DY2oO7jJCrGdxoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- FACEBOOK -->
-
     <meta property="og:title" content="ABN Recrutement, votre partenaire intérim, CDD et CDI"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.abnrecrutement.fr/"/>
     <meta property="og:image" content="https://marketplace.canva.com/F75pA/MAEKdFF75pA/1/s2/canva-job-seekers-with-resumes-in-hands-waiting-for-job-interview-sitting-on-chairs-in-a-row-MAEKdFF75pA.jpg"/>
     <meta property="og:description" content="Votre partenaire en recrutement dans les secteurs de la logistique et du tertiaire "/>
-
   </head>
 
   <body>
-  <div class="page-container">
-    <div class="navbar-container"><%= render "shared/navbar" %></div>
-    <div class="content-container"><%= yield %></div>
-    <%= render 'shared/flashes' %>
-    <div class="footer-container"><%= render "shared/footer" %></div>
+    <%= render 'cookies_eu/consent_banner', link: cookies_path, target: '_blank' %>
+    <div class="page-container">
+      <div class="navbar-container"><%= render "shared/navbar" %></div>
+      <div class="content-container"><%= yield %></div>
+      <%= render 'shared/flashes' %>
+      <div class="footer-container"><%= render "shared/footer" %></div>
+    </div>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />

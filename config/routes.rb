@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   devise_for :users, skip: [:registrations]
   devise_scope :user do
 
@@ -14,7 +13,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only: [:show, :edit, :update]
   resources :missions, only: [:index, :show, :new, :create, :destroy, :update, :edit] do
     # collection do
@@ -23,10 +21,10 @@ Rails.application.routes.draw do
     resources :participations, only: [:create, :destroy]
   end
 
- get "fields", to: "pages#fields" , as: :page_fields
- get "about", to: "pages#about", as: :page_about
-
+  get "fields", to: "pages#fields" , as: :page_fields
+  get "about", to: "pages#about", as: :page_about
   get 'sitemap.xml', to: 'pages#sitemap', format: 'xml', as: :sitemap
-
-
+  get 'contact', to: "pages#contact", as: :contact
+  get 'politique-de-gestion-des-cookies', to: "pages#cookies", as: :cookies
+  get 'cookies-accepted', to: "pages#cookies_accepted", as: :cookies_accepted
 end

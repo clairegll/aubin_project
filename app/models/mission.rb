@@ -4,7 +4,6 @@ class Mission < ApplicationRecord
   has_many :users, through: :participations
 
   has_rich_text :description
-  has_rich_text :location
   has_rich_text :summary
   has_rich_text :profil
 

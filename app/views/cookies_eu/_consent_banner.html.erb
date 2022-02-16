@@ -1,0 +1,13 @@
+<% unless session.present? && session['cookie_eu_consented'] == 'true' %>
+  <div class="cookies-eu js-cookies-eu text-white bg-dark p-2" id="cookies-banner">
+    <span class="cookies-eu-content-holder" style="font-size: 1.10em;">
+      Les cookies assurent le bon fonctionnement de nos services. En utilisant ces derniers, vous acceptez l'utilisation des cookies.
+    </span>
+    <span class="cookies-eu-button-holder">
+      <%= link_to 'OK', cookies_accepted_path, remote: true, class: "btn btn-primary mr-3", id: "cookies-btn" %>
+      <% if defined?(link).present? %>
+        <a href="<%= link %>" class="cookies-eu-link text-white" target="<%= defined?(target).present? ? target : '' %>">En savoir plus</a>
+      <% end %>
+    </span>
+  </div>
+<% end %>
