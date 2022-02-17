@@ -16,42 +16,11 @@
       <%= submit_tag "Rechercher", class: "btn btn-primary", style:"margin:10px 0;"%>
     <% end %>
 
-
-<!-- <label for="pet-select">Choose a pet:</label>
-
-<select name="pets" id="pet-select">
-    <option value="">--Please choose an option--</option>
-    <option value="dog">Dog</option>
-    <option value="cat">Cat</option>
-    <option value="hamster">Hamster</option>
-    <option value="parrot">Parrot</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
-</select>
-
-<input type="text" list="cars" />
-<datalist id="cars">
-  <option>Volvo</option>
-  <option>Saab</option>
-  <option>Mercedes</option>
-  <option>Audi</option>
-</datalist>
-
-<div id="billdesc">
-    <select id="test">
-      <option class="non" value="option1">Option1</option>
-      <option class="non" value="option2">Option2</option>
-      <option class="editable" value="other">Other</option>
-    </select>
-    <input class="editOption" style="display:none;"></input>
-</div> -->
-
-
   </div>
 </div>
 
-<div class = "container">
-  <div class="cards_missions p-3 mt-4" style="min-height : 65vh">
+<div class="container p-0">
+  <div class="cards_missions p-0 ml-0 mt-4" style="min-height : 65vh;">
     <% @missions.each do |mission| %>
       <%= link_to  mission_path(mission) do %>
           <div class="card-category_missions">
